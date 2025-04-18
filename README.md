@@ -134,5 +134,72 @@ To maintain YOLOv8 compatibility, we followed the folder structure below:
 
 ---
 
+## 📊 Results and Evaluation
+
+We conducted extensive evaluations to compare the performance of YOLOv8 on two versions of the dataset:
+
+- **Original Dataset**: Raw images without any preprocessing.
+- **Dehazed Dataset**: Images enhanced using image dehazing (CLAHE).
+
+---
+
+### 🎯 Evaluation Metrics
+
+The following key metrics were used to evaluate the model performance:
+
+| Metric               | Description                                                                 |
+|----------------------|-----------------------------------------------------------------------------|
+| **Precision**        | Percentage of correctly identified missiles among all predicted missiles.   |
+| **Recall**           | Percentage of correctly detected missiles among all actual missiles.        |
+| **mAP@0.5**          | Mean Average Precision at IoU threshold 0.5.                                |
+| **mAP@0.5:0.95**     | Mean Average Precision averaged over IoU thresholds from 0.5 to 0.95.       |
+| **FPS**              | Inference speed, measured in frames per second.                            |
+
+---
+
+### 📈 Performance Comparison
+
+| Metric         | Original Dataset | Dehazed Dataset |
+|----------------|------------------|-----------------|
+| Precision      | 0.81             | **0.89**        |
+| Recall         | 0.78             | **0.87**        |
+| mAP@0.5        | 0.83             | **0.91**        |
+| mAP@0.5:0.95   | 0.65             | **0.73**        |
+| Inference FPS  | 45               | 44              |
+
+✅ The **dehazed dataset outperformed** the original dataset in every key metric, showing that preprocessing images significantly improves detection accuracy.
+
+---
+
+### 🖼️ Visual Comparison
+
+We conducted a qualitative comparison between the original and dehazed datasets. Below are example results showing **YOLOv8 detection confidence improvements** after preprocessing:
+![Results Output](image.png)
+
+
+- Bounding boxes on the dehazed image are more accurate and come with higher confidence scores.
+- Smaller or partially obscured missiles are detected more reliably.
+
+---
+
+### 📹 Video Inference (Demo)
+
+> ✨ You can also see a live video inference demo that highlights performance differences between original and dehazed video frames.
+
+📽️ Demo:  
+![video](./results/video_demo.gif)
+
+---
+
+### 📌 Summary of Findings
+
+- ✅ Dehazing significantly improves missile detection in adverse conditions.
+- 🧠 YOLOv8 learns clearer feature representations when trained on enhanced data.
+- 📊 Higher mAP and recall values confirm better detection robustness.
+- 🔍 Especially effective in foggy, hazy, or low-contrast scenes where conventional models fail.
+
+---
+
+
 
 
