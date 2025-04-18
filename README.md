@@ -27,7 +27,7 @@ graph LR
 A[🖼️ Input Image] --> B[🌫️ Dehazing]
 B --> C[🧠 YOLOv8 Detection]
 C --> D[🔲 Output with Bounding Boxes + 🎯 Confidence Scores]
-
+```
 ---
 
 ## 📦 Dataset Description: Missile Detection (Roboflow)
