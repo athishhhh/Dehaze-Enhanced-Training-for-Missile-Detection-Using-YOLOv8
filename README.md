@@ -84,4 +84,55 @@ The YOLOv8 model is composed of three primary components:
 ![YOLOv8 Pipeline Output](1_DeULH1Huz5zkny1aO_WUGQ.png)
 
 
+---
+
+## 🧪 Data Preprocessing Workflow
+
+Missile detection in real-world conditions is often hindered by environmental noise such as fog, haze, and smoke. To address this, we designed a robust data preprocessing pipeline that enhances image clarity using dehazing techniques before training the YOLOv8 detection model.
+
+This preprocessing significantly improves detection confidence and accuracy under low-visibility conditions.
+
+---
+
+### 🔄 Step-by-Step Preprocessing Pipeline
+
+🔹 **Step 1: Dataset Acquisition**  
+- We used the publicly available **Missile Detection** dataset from Roboflow, created by Sanket Gurav.  
+- The dataset contains a total of **6,500 images**, all labeled using YOLO format.  
+
+**Breakdown:**  
+  • 4,700 images for training  
+  • ~900 for validation  
+  • ~900 for testing  
+
+- Each image includes a corresponding `.txt` annotation file with bounding boxes in YOLOv8-compatible format.
+
+---
+
+🔹 **Step 2: Image Dehazing**  
+- **Objective:** Improve feature visibility in images affected by atmospheric distortions like haze and smoke.  
+- **Technique used:** CLAHE (Contrast Limited Adaptive Histogram Equalization)  
+  • Enhances contrast in localized image regions.  
+  • Useful for increasing edge sharpness in low-visibility scenarios.  
+
+- **Optional alternatives considered:**  
+  • Dark Channel Prior (DCP)  
+  • Deep learning–based methods like AOD-Net, DehazeNet  
+
+- **Output:** Processed images saved in a separate directory (`images/train_dehazed/`).
+
+---
+
+🔹 **Step 3: Annotation Retention**  
+- Since no spatial/geometric changes were made to images, the **original YOLO `.txt` annotations were reused**.  
+- All label files were directly copied to match the dehazed image filenames and structure.
+
+---
+
+🔹 **Step 4: Dataset Structure Reorganization**  
+To maintain YOLOv8 compatibility, we followed the folder structure below:
+
+---
+
+
 
