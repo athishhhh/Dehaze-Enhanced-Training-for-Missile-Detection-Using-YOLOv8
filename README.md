@@ -184,10 +184,9 @@ We conducted a qualitative comparison between the original and dehazed datasets.
 
 ### 📹 Video Inference (Demo)
 
-> ✨ You can also see a live video inference demo that highlights performance differences between original and dehazed video frames.
+> ✨ The final result
+[https://github.com/user-attachments/assets/5a9abe68-6e5a-411f-b645-58a8034667ec]
 
-📽️ Demo:  
-![video](final_cut.mp4)
 
 ---
 
