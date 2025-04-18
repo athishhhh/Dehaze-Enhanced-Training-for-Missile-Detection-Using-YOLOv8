@@ -81,6 +81,7 @@ The YOLOv8 model is composed of three primary components:
 ---
 
 ## 🧊 YOLOv8 Detection Pipeline
-![YOLOv8 Pipeline Output](assets/pipeline_output.png)
+![YOLOv8 Pipeline Output](1_DeULH1Huz5zkny1aO_WUGQ.png)
+
 
 
