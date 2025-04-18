@@ -20,3 +20,12 @@ This project enhances missile detection using YOLOv8 by applying image dehazing 
 We introduce a preprocessing pipeline using **image dehazing techniques** prior to YOLOv8 training and inference to enhance feature visibility.
 
 **Workflow:**
+## 🚀 Inference Pipeline
+
+```mermaid
+graph LR
+A[🖼️ Input Image] --> B[🌫️ Dehazing]
+B --> C[🧠 YOLOv8 Detection]
+C --> D[🔲 Output with Bounding Boxes + 🎯 Confidence Scores]
+
+
