@@ -184,9 +184,10 @@ We conducted a qualitative comparison between the original and dehazed datasets.
 
 ## ✨ Final Result
 
-The following visualization shows the final output of our missile detection system after applying dehazing and YOLOv8 object detection. The bounding boxes and confidence scores demonstrate improved accuracy in identifying missiles, even in low-visibility conditions.
+The following visualization shows the final output of our missile detection system after applying dehazing and YOLOv8 object detection.  
+The bounding boxes and confidence scores demonstrate improved accuracy in identifying missiles, even in low-visibility conditions.
 
-![Final Result](https://github.com/user-attachments/assets/5a9abe68-6e5a-411f-b645-58a8034667ec)
+[![Final Result](https://github.com/user-attachments/assets/5a9abe68-6e5a-411f-b645-58a8034667ec)](https://github.com/user-attachments/assets/5a9abe68-6e5a-411f-b645-58a8034667ec)
 
 > 🔍 This result highlights the strength of image preprocessing in improving model confidence and accuracy.
 
